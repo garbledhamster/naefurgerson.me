@@ -13,6 +13,10 @@
         "Bitter winds and crimson rain,",
         "Stones remember all the pain."
       ],
+      "emphasis": {
+        "bold": ["whispers", "blood-red", "eternal"],
+        "italics": ["shadowed", "untamed", "crimson"]
+      },
       "styles": {
         "title": {
           "fontFamily": "'Impact', sans-serif",
@@ -40,6 +44,10 @@
         "Harsh winds howl the ancient song,",
         "In the realm where brave belong."
       ],
+      "emphasis": {
+        "bold": ["relentless", "cruel", "ancient"],
+        "italics": ["molten", "shadowed", "harsh"]
+      },
       "styles": {
         "title": {
           "fontFamily": "'Oswald', sans-serif",
@@ -67,6 +75,10 @@
         "Harbingers of darkened lore,",
         "Whispers of the tempest's roar."
       ],
+      "emphasis": {
+        "bold": ["Lightning", "savage", "endless"],
+        "italics": ["midnight", "fierce", "tempest"]
+      },
       "styles": {
         "title": {
           "fontFamily": "'Bebas Neue', sans-serif",
