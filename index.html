@@ -1,1 +1,45 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Column Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+  <script>
+    document.querySelectorAll('div').forEach(section => {
+        section.addEventListener('click', () => {
+            section.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+
+<body class="bg-gray-100">
+    <div class="flex flex-col h-screen">
+        <!-- Section 1 -->
+        <div class="flex h-screen">
+            <!-- Left Column -->
+            <div class="w-1/2 flex flex-col justify-center items-center bg-white p-8">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Step Into Fearless Living</h1>
+                <p class="text-lg text-gray-600 mb-2">Craft your life of meaning & purpose.</p>
+                <p class="text-lg text-gray-600 mb-2">Create the life you've been waiting for.</p>
+                <p class="text-lg text-gray-600">A powerful action-based system, a motivated community, and dozens of supportive video courses to awaken the highest possibilities within you.</p>
+            </div>
+            <!-- Right Column -->
+            <div class="w-1/2 bg-cover bg-center" style="background-image: url('https://via.placeholder.com/600x800');"></div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="flex h-screen">
+            <!-- Left Column -->
+            <div class="w-1/2 flex flex-col justify-center items-center bg-white p-8">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Next Section Title</h1>
+                <p class="text-lg text-gray-600 mb-2">More inspiring content goes here.</p>
+            </div>
+            <!-- Right Column -->
+            <div class="w-1/2 bg-cover bg-center" style="background-image: url('https://via.placeholder.com/600x800');"></div>
+        </div>
+    </div>
+</body>
+</html>
