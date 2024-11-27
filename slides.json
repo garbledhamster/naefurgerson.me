@@ -1,1 +1,85 @@
-
+{
+  "slides": [
+    {
+      "title": "Echoes of the Abyss",
+      "body": [
+        "In the shadowed depths where whispers die,",
+        "Steel meets stone beneath a blood-red sky.",
+        "Fires rage with untamed might,",
+        "Dancing flames in eternal night.",
+        "",
+        "Screams of silence, broken chains,",
+        "Thunder roars through endless plains.",
+        "Bitter winds and crimson rain,",
+        "Stones remember all the pain."
+      ],
+      "styles": {
+        "title": {
+          "fontFamily": "'Impact', sans-serif",
+          "fontSize": "3rem",
+          "color": "crimson"
+        },
+        "body": {
+          "fontFamily": "'Courier New', monospace",
+          "fontSize": "1.5rem",
+          "color": "#333"
+        },
+        "backgroundImage": "https://picsum.photos/800/1200?random=4"
+      }
+    },
+    {
+      "title": "Steel and Stone",
+      "body": [
+        "Iron hearts forged in molten fire,",
+        "Steel and stone, relentless desire.",
+        "Grinding gears of fate's cruel hand,",
+        "Spilling shadows across the land.",
+        "",
+        "Bridges crumble, towers fall,",
+        "Echoes linger through the sprawl.",
+        "Harsh winds howl the ancient song,",
+        "In the realm where brave belong."
+      ],
+      "styles": {
+        "title": {
+          "fontFamily": "'Oswald', sans-serif",
+          "fontSize": "3rem",
+          "color": "darkslategray"
+        },
+        "body": {
+          "fontFamily": "'Roboto Mono', monospace",
+          "fontSize": "1.5rem",
+          "color": "#222"
+        },
+        "backgroundImage": "https://picsum.photos/800/1200?random=5"
+      }
+    },
+    {
+      "title": "Thunder's Wrath",
+      "body": [
+        "Lightning splits the midnight veil,",
+        "Thunder's roar, a savage tale.",
+        "Skies ignite with fierce delight,",
+        "Battles fought in endless night.",
+        "",
+        "Mountains tremble, rivers cry,",
+        "Steel beneath the stormy sky.",
+        "Harbingers of darkened lore,",
+        "Whispers of the tempest's roar."
+      ],
+      "styles": {
+        "title": {
+          "fontFamily": "'Bebas Neue', sans-serif",
+          "fontSize": "3rem",
+          "color": "navy"
+        },
+        "body": {
+          "fontFamily": "'Consolas', monospace",
+          "fontSize": "1.5rem",
+          "color": "#111"
+        },
+        "backgroundImage": "https://picsum.photos/800/1200?random=6"
+      }
+    }
+  ]
+}
