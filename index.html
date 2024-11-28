@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Consolas&family=Courier+New&family=Impact&family=Oswald&family=Roboto+Mono&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-html, body{height:100%; overflow:hidden; font-family:Arial,sans-serif;}
+html, body{height:100%;overflow:hidden;font-family:Arial,sans-serif;}
 :root{--vh:1vh;}
 .loading-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background-color:#ffffff;display:flex;justify-content:center;align-items:center;z-index:50;opacity:1;transition:opacity 0.5s ease;visibility:visible;}
 .loading-overlay.hidden{opacity:0;visibility:hidden;}
@@ -19,7 +19,7 @@ html, body{height:100%; overflow:hidden; font-family:Arial,sans-serif;}
 #carousel{scroll-snap-type:y mandatory;overflow-y:scroll;height:calc(var(--vh) * 100);position:relative;z-index:30;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth;}
 #carousel::-webkit-scrollbar{display:none;}
 .carousel-slide{scroll-snap-align:start;height:calc(var(--vh) * 100);display:flex;justify-content:center;align-items:center;position:relative;background-size:cover;background-position:center;}
-.text-container{background:rgba(255,255,255,0.85); padding:2rem; border-radius:8px; max-width:800px; text-align:center;}
+.text-container{background:rgba(255,255,255,0.85);padding:2rem;border-radius:8px;max-width:800px;text-align:center;}
 .carousel-slide h1{font-size:2rem;margin-bottom:1rem;text-shadow:1px 1px 2px rgba(0,0,0,0.3);}
 .carousel-slide p{font-size:1rem;line-height:1.5;text-shadow:1px 1px 2px rgba(0,0,0,0.3);}
 @media (max-width:768px){
@@ -34,123 +34,123 @@ em{font-style:italic;}
 </head>
 <body class="bg-gray-100">
 <div id="loading-overlay" class="loading-overlay">
-<div class="loading-content text-center">
-<h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">Loading Nae's content, this will only take a second...</h1>
-</div>
+  <div class="loading-content text-center">
+    <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">Loading Nae's content, this will only take a second...</h1>
+  </div>
 </div>
 <div class="video-overlay">
-<video autoplay loop muted>
-<source src="https://cdn.pixabay.com/video/2024/03/20/204923-925628367_large.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+  <video autoplay loop muted>
+    <source src="https://cdn.pixabay.com/video/2024/03/20/204923-925628367_large.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </div>
 <div id="carousel"></div>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-const slidesUrl = 'https://raw.githubusercontent.com/garbledhamster/naefurgerson.me/main/slides.json';
-function setVh(){
-const vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-window.addEventListener('resize', setVh);
-setVh();
-function hideLoadingOverlay(){
-const loadingOverlay = document.getElementById('loading-overlay');
-if(loadingOverlay){
-loadingOverlay.classList.add('hidden');
-setTimeout(() => {
-loadingOverlay.style.visibility = 'hidden';
-loadingOverlay.style.pointerEvents = 'none';
-}, 500);
-}
-}
-function escapeRegExp(string){
-return string.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-}
-function applyEmphasis(text, emphasisDict){
-if(!emphasisDict) return text;
-let emphasizedText = text;
-if(emphasisDict.bold && Array.isArray(emphasisDict.bold)){
-emphasisDict.bold.forEach(word => {
-const escapedWord = escapeRegExp(word);
-const regex = new RegExp(`\\b(${escapedWord})\\b`, 'gi');
-emphasizedText = emphasizedText.replace(regex, '<strong>$1</strong>');
-});
-}
-if(emphasisDict.italics && Array.isArray(emphasisDict.italics)){
-emphasisDict.italics.forEach(word => {
-const escapedWord = escapeRegExp(word);
-const regex = new RegExp(`\\b(${escapedWord})\\b`, 'gi');
-emphasizedText = emphasizedText.replace(regex, '<em>$1</em>');
-});
-}
-return emphasizedText;
-}
-function createSlide(slideData){
-const slide = document.createElement('div');
-slide.classList.add('carousel-slide');
-slide.style.backgroundImage = `url('${slideData.styles.backgroundImage}')`;
-const textContainer = document.createElement('div');
-textContainer.classList.add('text-container');
-const title = document.createElement('h1');
-title.textContent = slideData.title;
-title.classList.add('text-3xl','md:text-4xl','lg:text-5xl','font-bold','text-gray-800','mb-6');
-if(slideData.styles && slideData.styles.title){
-const titleStyles = slideData.styles.title;
-if(titleStyles.fontFamily) title.style.fontFamily = titleStyles.fontFamily;
-if(titleStyles.fontSize) title.style.fontSize = titleStyles.fontSize;
-if(titleStyles.color) title.style.color = titleStyles.color;
-}
-const body = document.createElement('p');
-body.classList.add('text-base','md:text-lg','lg:text-xl','text-gray-700','leading-relaxed');
-if(slideData.styles && slideData.styles.body){
-const bodyStyles = slideData.styles.body;
-if(bodyStyles.fontFamily) body.style.fontFamily = bodyStyles.fontFamily;
-if(bodyStyles.fontSize) body.style.fontSize = bodyStyles.fontSize;
-if(bodyStyles.color) body.style.color = bodyStyles.color;
-}
-if(slideData.body && Array.isArray(slideData.body)){
-slideData.body.forEach(line => {
-if(line === ""){
-body.appendChild(document.createElement('br'));
-}else{
-if(slideData.emphasis){
-const emphasizedLine = applyEmphasis(line, slideData.emphasis);
-const lineElement = document.createElement('span');
-lineElement.innerHTML = emphasizedLine;
-body.appendChild(lineElement);
-}else{
-body.appendChild(document.createTextNode(line));
-}
-body.appendChild(document.createElement('br'));
-}
-});
-}
-textContainer.appendChild(title);
-textContainer.appendChild(body);
-slide.appendChild(textContainer);
-return slide;
-}
-fetch(slidesUrl)
-.then(response => {
-if(!response.ok){
-throw new Error(`Network response was not ok (${response.status})`);
-}
-return response.json();
-})
-.then(data => {
-const carousel = document.getElementById('carousel');
-data.slides.forEach(slideData => {
-const slide = createSlide(slideData);
-carousel.appendChild(slide);
-});
-hideLoadingOverlay();
-})
-.catch(error => {
-console.error('Error fetching slides:', error);
-const loadingContent = document.querySelector('.loading-content');
-loadingContent.innerHTML = `<h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600">Failed to load content.</h1>`;
-});
+  const slidesUrl = 'https://raw.githubusercontent.com/garbledhamster/naefurgerson.me/main/slides.json';
+  function setVh(){
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  window.addEventListener('resize', setVh);
+  setVh();
+  function hideLoadingOverlay(){
+    const loadingOverlay = document.getElementById('loading-overlay');
+    if(loadingOverlay){
+      loadingOverlay.classList.add('hidden');
+      setTimeout(() => {
+        loadingOverlay.style.visibility = 'hidden';
+        loadingOverlay.style.pointerEvents = 'none';
+      }, 500);
+    }
+  }
+  function escapeRegExp(string){
+    return string.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  }
+  function applyEmphasis(text, emphasisDict){
+    if(!emphasisDict) return text;
+    let emphasizedText = text;
+    if(emphasisDict.bold && Array.isArray(emphasisDict.bold)){
+      emphasisDict.bold.forEach(word => {
+        const escapedWord = escapeRegExp(word);
+        const regex = new RegExp(`\\b(${escapedWord})\\b`, 'gi');
+        emphasizedText = emphasizedText.replace(regex, '<strong>$1</strong>');
+      });
+    }
+    if(emphasisDict.italics && Array.isArray(emphasisDict.italics)){
+      emphasisDict.italics.forEach(word => {
+        const escapedWord = escapeRegExp(word);
+        const regex = new RegExp(`\\b(${escapedWord})\\b`, 'gi');
+        emphasizedText = emphasizedText.replace(regex, '<em>$1</em>');
+      });
+    }
+    return emphasizedText;
+  }
+  function createSlide(slideData){
+    const slide = document.createElement('div');
+    slide.classList.add('carousel-slide');
+    slide.style.backgroundImage = `url('${slideData.styles.backgroundImage}')`;
+    const textContainer = document.createElement('div');
+    textContainer.classList.add('text-container');
+    const title = document.createElement('h1');
+    title.textContent = slideData.title;
+    title.classList.add('text-3xl','md:text-4xl','lg:text-5xl','font-bold','text-gray-800','mb-6');
+    if(slideData.styles && slideData.styles.title){
+      const titleStyles = slideData.styles.title;
+      if(titleStyles.fontFamily) title.style.fontFamily = titleStyles.fontFamily;
+      if(titleStyles.fontSize) title.style.fontSize = titleStyles.fontSize;
+      if(titleStyles.color) title.style.color = titleStyles.color;
+    }
+    const body = document.createElement('p');
+    body.classList.add('text-base','md:text-lg','lg:text-xl','text-gray-700','leading-relaxed');
+    if(slideData.styles && slideData.styles.body){
+      const bodyStyles = slideData.styles.body;
+      if(bodyStyles.fontFamily) body.style.fontFamily = bodyStyles.fontFamily;
+      if(bodyStyles.fontSize) body.style.fontSize = bodyStyles.fontSize;
+      if(bodyStyles.color) body.style.color = bodyStyles.color;
+    }
+    if(slideData.body && Array.isArray(slideData.body)){
+      slideData.body.forEach(line => {
+        if(line === ""){
+          body.appendChild(document.createElement('br'));
+        } else {
+          if(slideData.emphasis){
+            const emphasizedLine = applyEmphasis(line, slideData.emphasis);
+            const lineElement = document.createElement('span');
+            lineElement.innerHTML = emphasizedLine;
+            body.appendChild(lineElement);
+          } else {
+            body.appendChild(document.createTextNode(line));
+          }
+          body.appendChild(document.createElement('br'));
+        }
+      });
+    }
+    textContainer.appendChild(title);
+    textContainer.appendChild(body);
+    slide.appendChild(textContainer);
+    return slide;
+  }
+  fetch(slidesUrl)
+    .then(response => {
+      if(!response.ok){
+        throw new Error(`Network response was not ok (${response.status})`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      const carousel = document.getElementById('carousel');
+      data.slides.forEach(slideData => {
+        const slide = createSlide(slideData);
+        carousel.appendChild(slide);
+      });
+      hideLoadingOverlay();
+    })
+    .catch(error => {
+      console.error('Error fetching slides:', error);
+      const loadingContent = document.querySelector('.loading-content');
+      loadingContent.innerHTML = `<h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600">Failed to load content.</h1>`;
+    });
 });
 </script>
 </body>
