@@ -1,0 +1,101 @@
+gallery:
+  - category: poems
+    image: "https://picsum.photos/id/237/500/700"
+    overlayTitle: "Poem (Emily Dickinson):"
+    overlayContent: |
+      “Hope” is the thing with feathers –<br>
+      That perches in the soul –<br>
+      And sings the tune without the words –<br>
+      And never stops – at all –<br>
+      <br>
+      And sweetest – in the Gale – is heard –<br>
+      And sore must be the storm –<br>
+      That could abash the little Bird<br>
+      That kept so many warm –<br>
+      <br>
+      I’ve heard it in the chillest land –<br>
+      And on the strangest Sea –<br>
+      Yet, never, in Extremity,<br>
+      It asked a crumb – of Me.
+
+  - category: ancesstory
+    image: "https://picsum.photos/id/238/500/700"
+    overlayTitle: "Ancesstory:"
+    overlayContent: |
+      Beneath these towering forest pines<br>
+      Our ancestors traced hidden lines<br>
+      Their footprints echo through the green<br>
+      Whispering tales once felt and seen
+
+  - category: prayers
+    image: "https://picsum.photos/id/239/500/700"
+    overlayTitle: "Prayer:"
+    overlayContent: |
+      In humble dawn’s quiet hush I bow<br>
+      Seeking peace in the here and now<br>
+      A guiding light through shadows cast<br>
+      Renew my soul, hold me steadfast
+
+  - category: poems
+    image: "https://picsum.photos/id/240/500/700"
+    overlayTitle: "Poem (Robert Frost):"
+    overlayContent: |
+      Two roads diverged in a yellow wood,<br>
+      And sorry I could not travel both<br>
+      And be one traveler, long I stood<br>
+      And looked down one as far as I could<br>
+      To where it bent in the undergrowth;<br>
+      <br>
+      Then took the other, as just as fair,<br>
+      And having perhaps the better claim,<br>
+      Because it was grassy and wanted wear;<br>
+      Though as for that the passing there<br>
+      Had worn them really about the same,<br>
+      <br>
+      And both that morning equally lay<br>
+      In leaves no step had trodden black.<br>
+      Oh, I kept the first for another day!<br>
+      Yet knowing how way leads on to way,<br>
+      I doubted if I should ever come back.<br>
+      <br>
+      I shall be telling this with a sigh<br>
+      Somewhere ages and ages hence:<br>
+      Two roads diverged in a wood, and I—<br>
+      I took the one less traveled by,<br>
+      And that has made all the difference.
+
+  - category: quotes
+    image: "https://picsum.photos/id/241/500/700"
+    overlayTitle: ""
+    overlayContent: |
+      <blockquote>
+        “Courage doesn't always roar. Sometimes courage is the quiet voice at the end of the day saying, ‘I will try again tomorrow.’”<br>
+        — Mary Anne Radmacher
+      </blockquote>
+
+  - category: ancesstory
+    image: "https://picsum.photos/id/242/500/700"
+    overlayTitle: "Ancesstory:"
+    overlayContent: |
+      Upon these rugged, ancient cliffs<br>
+      Their silent strength a precious gift<br>
+      Our kin once stood with steadfast grace<br>
+      Their stories etched upon this place
+
+  - category: prayers
+    image: "https://picsum.photos/id/243/500/700"
+    overlayTitle: "Prayer:"
+    overlayContent: |
+      May each breath calm restless mind<br>
+      In gentle trust new hope we find<br>
+      Hallowed be the quiet grace<br>
+      Guiding us in sacred space
+
+  - category: quotes
+    image: "https://picsum.photos/id/244/500/700"
+    overlayTitle: ""
+    overlayContent: |
+      <blockquote>
+        “In the middle of every difficulty lies opportunity.”<br>
+        — Albert Einstein
+      </blockquote>
