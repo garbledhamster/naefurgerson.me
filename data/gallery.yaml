@@ -1,108 +1,7 @@
 gallery:
   - category: poems
-    image: "https://picsum.photos/id/348/500/700"
-    overlayTitle: "Poem (Emily Dickinson):"
-    overlayContent: |
-      “Hope” is the thing with feathers –  
-      That perches in the soul –  
-      And sings the tune without the words –  
-      And never stops – at all –  
-
-      And sweetest – in the Gale – is heard –  
-      And sore must be the storm –  
-      That could abash the little Bird  
-      That kept so many warm –  
-
-      I’ve heard it in the chillest land –  
-      And on the strangest Sea –  
-      Yet, never, in Extremity,  
-      It asked a crumb – of Me.
-
-  - category: ancesstory
-    image: "https://picsum.photos/id/617/500/700"
-    overlayTitle: "Ancesstory:"
-    overlayContent: |
-      Beneath these towering forest pines  
-      Our ancestors traced hidden lines  
-      Their footprints echo through the green  
-      Whispering tales once felt and seen
-
-  - category: prayers
-    image: "https://picsum.photos/id/657/500/700"
-    overlayTitle: "Prayer:"
-    overlayContent: |
-      In humble dawn’s quiet hush I bow  
-      Seeking peace in the here and now  
-      A guiding light through shadows cast  
-      Renew my soul, hold me steadfast
-
-  - category: poems
-    image: "https://picsum.photos/id/564/500/700"
-    overlayTitle: "Poem (Robert Frost):"
-    overlayContent: |
-      Two roads diverged in a yellow wood,  
-      And sorry I could not travel both  
-      And be one traveler, long I stood  
-      And looked down one as far as I could  
-      To where it bent in the undergrowth;  
-
-      Then took the other, as just as fair,  
-      And having perhaps the better claim,  
-      Because it was grassy and wanted wear;  
-      Though as for that the passing there  
-      Had worn them really about the same,  
-
-      And both that morning equally lay  
-      In leaves no step had trodden black.  
-      Oh, I kept the first for another day!  
-      Yet knowing how way leads on to way,  
-      I doubted if I should ever come back.  
-
-      I shall be telling this with a sigh  
-      Somewhere ages and ages hence:  
-      Two roads diverged in a wood, and I—  
-      I took the one less traveled by,  
-      And that has made all the difference.
-
-  - category: quotes
-    image: "https://picsum.photos/id/842/500/700"
-    overlayTitle: ""
-    overlayContent: |
-      <blockquote>
-        “Courage doesn't always roar. Sometimes courage is the quiet voice at the end of the day saying, ‘I will try again tomorrow.’”  
-        — Mary Anne Radmacher
-      </blockquote>
-
-  - category: ancesstory
-    image: "https://picsum.photos/id/428/500/700"
-    overlayTitle: "Ancesstory:"
-    overlayContent: |
-      Upon these rugged, ancient cliffs  
-      Their silent strength a precious gift  
-      Our kin once stood with steadfast grace  
-      Their stories etched upon this place
-
-  - category: prayers
-    image: "https://picsum.photos/id/503/500/700"
-    overlayTitle: "Prayer:"
-    overlayContent: |
-      May each breath calm restless mind  
-      In gentle trust new hope we find  
-      Hallowed be the quiet grace  
-      Guiding us in sacred space
-
-  - category: quotes
-    image: "https://picsum.photos/id/668/500/700"
-    overlayTitle: ""
-    overlayContent: |
-      <blockquote>
-        “In the middle of every difficulty lies opportunity.”  
-        — Albert Einstein
-      </blockquote>
-
-  - category: poems
-    image: "https://picsum.photos/id/712/500/700"
-    overlayTitle: "Poem (Mom): Stories We Shared"
+    image: "https://picsum.photos/id/905/500/700"
+    overlayTitle: "Stories We Shared"
     overlayContent: |
       The stories I tell or the words that I say  
       Whether it be for a second or even a day  
@@ -125,7 +24,7 @@ gallery:
 
   - category: poems
     image: "https://picsum.photos/id/915/500/700"
-    overlayTitle: "Poem (Mom): The fight"
+    overlayTitle: "The Fight"
     overlayContent: |
       Today is the day I lay it all down  
       I'll walk away without even a frown  
@@ -137,24 +36,3 @@ gallery:
       It's not worth our friendship to keep up this fight  
       I'll stay to myself as I have always done  
       The fight is over and you have won !
-
-  - category: quotes
-    image: "https://picsum.photos/id/231/500/700"
-    overlayTitle: ""
-    overlayContent: |
-      “Sometimes letting things go is an act of far greater power than defending or hanging on.”  
-      — Eckhart Tolle
-
-  - category: quotes
-    image: "https://picsum.photos/id/487/500/700"
-    overlayTitle: ""
-    overlayContent: |
-      “In the end, these things matter most: How well did you love? How fully did you live? How deeply did you let go?”  
-      — Buddha
-
-  - category: quotes
-    image: "https://picsum.photos/id/998/500/700"
-    overlayTitle: ""
-    overlayContent: |
-      “Grant me the serenity to accept the things I cannot change, courage to change the things I can, and wisdom to know the difference.”  
-      — Serenity Prayer

@@ -19,17 +19,17 @@
   <meta name="theme-color" content="#ffffff">
   <!-- Social Meta Tags -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/">
+  <meta property="og:url" content="https://naefurgerson.me/">
   <meta property="og:title" content="Mom's Inspiration">
   <meta property="og:description"
     content="A site dedicated to a wonderful mother whose struggles and triumphs are admirable and uplifting.">
-  <meta property="og:image" content="https://example.com/assets/images/cover-image.jpg">
+  <meta property="og:image" content="https://naefurgerson.me/assets/favicon/apple-touch-icon.png">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://example.com/">
+  <meta property="twitter:url" content="https://naefurgerson.me/">
   <meta property="twitter:title" content="Mom's Inspiration">
   <meta property="twitter:description"
     content="A site dedicated to a wonderful mother whose struggles and triumphs are admirable and uplifting.">
-  <meta property="twitter:image" content="https://example.com/assets/images/cover-image.jpg">
+  <meta property="twitter:image" content="https://naefurgerson.me/assets/favicon/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="styles.css">
@@ -126,7 +126,8 @@
       position: relative;
       overflow: hidden;
       border: 2px solid #00ffff;
-      aspect-ratio: 3/4; /* Maintains a ratio for images */
+      aspect-ratio: 3/4;
+      /* Maintains a ratio for images */
       display: none;
       box-shadow: 0 4px 8px #00ffff;
       background-color: #2e005e;
@@ -162,6 +163,12 @@
 
     .gallery-item:hover .overlay {
       opacity: 0;
+    }
+
+    /* ⭐ Preserve line breaks from YAML ⭐ */
+    .overlay p {
+      white-space: pre-wrap;
+      line-height: 1.5;
     }
 
     .sticky-footer {
@@ -239,17 +246,12 @@
         galleryItem.className = "gallery-item"
         galleryItem.setAttribute("data-tags", item.category)
         galleryItem.innerHTML = `
-          <img src="${item.image}" alt="${item.overlayTitle || 'Gallery Image'}" />
-          <div class="overlay">
-            <p>
-              ${item.overlayTitle
-                ? `<strong>${item.overlayTitle}</strong><br><br>`
-                : ""
-              }
-              ${item.overlayContent}
-            </p>
-          </div>
-        `
+        <img src="${item.image}" alt="${item.overlayTitle || 'Gallery Image'}" />
+        <div class="overlay">
+          <p>${item.overlayTitle ? `<strong>${item.overlayTitle}</strong><br><br>` : ""}${item.overlayContent}</p>
+        </div>
+        `.trim();
+
         galleryContainer.appendChild(galleryItem)
       })
     }
@@ -283,7 +285,7 @@
       const isSingleColumn = window.innerWidth < 700;
 
       // 2️⃣ Set different max font sizes based on column count
-      let maxFont = isSingleColumn ? 2.0 : 1.2;
+      let maxFont = isSingleColumn ? 2.0 : 1;
       let minFont = 0.4;
 
       // 3️⃣ For each overlay text, do the math
@@ -291,7 +293,7 @@
         const textLength = overlayText.textContent.trim().length;
 
         // 3.1 Clamp textLength
-        const maxChars = 800;
+        const maxChars = 400;
         const clampedLen = Math.min(textLength, maxChars);
 
         // 3.2 Linear interpolation from maxFont → minFont
@@ -333,8 +335,8 @@
   <div class="hero-banner">
     <h2>💕 A Warm Tribute to My Mom 💕</h2>
     <p>
-      This site is dedicated to a wonderful mother whose compassion, resilience, 
-      and unwavering love inspire us to keep growing and healing. 
+      This site is dedicated to a wonderful mother whose compassion, resilience,
+      and unwavering love inspire us to keep growing and healing.
       Explore poems, ancesstory, quotes, and prayers to spark hope and courage.
     </p>
     <button onclick="alert('Thank you for honoring our beloved mom with your presence!')">💖 Send Her Love 💖</button>
